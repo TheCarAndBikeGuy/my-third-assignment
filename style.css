@@ -1,0 +1,161 @@
+/* Page Layout */
+body {
+  background-color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*  Title */
+
+h1 {
+  color: #fff;
+  text-align: center;
+  text-decoration: underline;
+  font-family: Verdana;
+}
+
+/* Information */
+p {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Cat Clicker */
+
+#catBtn {
+  background-image: url("images/cat.gif");
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Cat Facts */
+
+.facts {
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  text-decoration: underline;
+}
+
+ul {
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 45px;
+  left: 5px;
+}
+
+/* Table */
+.table {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+
+table,
+th,
+td {
+  border: 1px solid;
+  background-color: #000;
+  color: #fff;
+}
+
+
+.all {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 10px;
+}
+
+/* Upgrade One */
+.upgradeOne {
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.upgradeOne:hover {
+    background-color: #FFD6BA;
+    transition: 0.5s;
+}
+
+button #upgOne {
+  height: 50px;
+  width: 50px;
+}
+
+/* Upgrade Two */
+.upgradeTwo {
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.upgradeTwo:hover {
+    background-color: #FFD6BA;
+    transition: 0.5s;
+}
+
+button #upgTwo {
+  height: 50px;
+  width: 50px;
+}
+
+/* Upgrade Three */
+.upgradeThree {
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.upgradeThree:hover {
+    background-color: #FFD6BA;
+    transition: 0.5s;
+}
+
+button #upgThree {
+  height: 50px;
+  width: 97px;
+}
+
+/* Upgrade Four */
+.upgradeFour {
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.upgradeFour:hover {
+    background-color: #FFD6BA;
+    transition: 0.5s;
+}
+
+button #upgFour {
+  height: 50px;
+  width: 97px;
+}
+
+/* Upgrade Five */
+.upgradeFive {
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.upgradeFive:hover {
+    background-color: #FFD6BA;
+    transition: 0.5s;
+}
+
+button #upgFive {
+  height: 50px;
+  width: 97px;
+}

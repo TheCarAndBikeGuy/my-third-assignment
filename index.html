@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Cat Clicker</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <h1 title="header">Cat Clicker</h1>
+    <!-- Counter -->
+    <p title="cat count" id="cat-count">0</p>
+    <p title="cat count" id="cps-display">1 Per Second</p>
+    <!-- Clicker -->
+    <button id="catBtn"></button>
+    <!-- Cat Facts -->
+    <h4 title="Cat Facts" class="facts">Cat Facts</h4>
+    <ul>
+      <li>Excellent Night Vision</li>
+      <li>Can jump several times their height</li>
+      <li>Rapid Reflexes</li>
+      <li>Sleep up to 16 hours a day (I wish)</li>
+      <li>Sensitive to changes in routine</li>
+      <li>They are Carnivores</li>
+      <li>Cats use their tails for balance</li>
+      <li>Cats have up to 100 different vocalizations</li>
+    </ul>
+    <!-- Table -->
+    <table class="table" title="Table">
+      <tr>
+        <th>Upgrades</th>
+        <th>Price</th>
+        <th>Per Second</th>
+      </tr>
+      <tr>
+        <td>Treats</td>
+        <td>200 Clicks</td>
+        <td>10 PS</td>
+      </tr>
+      <tr>
+        <td>Birds</td>
+        <td>1000 Clicks</td>
+        <td>30 PS</td>
+      </tr>
+      <tr>
+        <td>Catnip</td>
+        <td>3000 Clicks</td>
+        <td>70 PS</td>
+      </tr>
+      <tr>
+        <td>Cat Tree</td>
+        <td>10000 Clicks</td>
+        <td>150 PS</td>
+      </tr>
+      <tr>
+        <td>Human Bed</td>
+        <td>15000 Clicks</td>
+        <td>250 PS</td>
+      </tr>
+    </table>
+    <!-- UPG One Treats -->
+    <div class="all">
+      <div title="Treats">
+        <button class="upgradeOne">
+          <img
+            src="images/treats-removebg-preview.png"
+            alt="treats for cats"
+            id="upgOne"
+          />
+          <h3>Cheese Treat</h3>
+          <h4 id="treat-amount">0</h4>
+        </button>
+      </div>
+      <!-- UPG Two Birds -->
+      <div title="Cat Chasing Bird">
+        <button class="upgradeTwo">
+          <img
+            src="images/catchasing-removebg-preview.png"
+            alt="cats chasing birds"
+            id="upgTwo"
+          />
+          <h3>Bird Chasing</h3>
+          <h4 id="bird-amount">0</h4>
+        </button>
+      </div>
+      <!-- UPG Three Catnip -->
+      <div title="Catnip">
+        <button class="upgradeThree">
+          <img
+            src="images/Catnip_flowers-removebg-preview.png"
+            alt="Cats Like Catnip"
+            id="upgThree"
+          />
+          <h3>Catnip</h3>
+          <h4 id="catnip-amount">0</h4>
+        </button>
+      </div>
+      <!-- UPG Four Cat Tree -->
+      <div title="Cat Tree">
+        <button class="upgradeFour">
+          <img
+            src="images/catTree-removebg-preview.png"
+            alt="Cats Climb Cat Trees"
+            id="upgFour"
+          />
+          <h3>Cat Tree</h3>
+          <h4 id="cattree-amount">0</h4>
+        </button>
+      </div>
+      <!-- UPG Five Human Bed -->
+      <div title="Human Bed">
+        <button class="upgradeFive">
+          <img
+            src="images/bed-removebg-preview.png"
+            alt="Cats Favourite Thing Is A Human Bed"
+            id="upgFive"
+          />
+          <h3>Human Bed</h3>
+          <h4 id="humanbed-amount">0</h4>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
