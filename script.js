@@ -43,9 +43,12 @@ function clickCat() {
 
 catBtn.addEventListener("click", clickCat);
 
+if (cats) {
+  getCatCount = cats;
+}
+
 function getCatCount() {
   // Cats Count
-  let countInLS = 0;
   cats = parseInt(localStorage.getItem("countInLS"));
   catCount.textContent = cats;
   // Seconds Count‹
