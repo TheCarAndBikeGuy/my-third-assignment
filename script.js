@@ -49,25 +49,36 @@ function getCatCount() {
   if (localStorage.getItem("countInLS")) {
     cats = parseInt(localStorage.getItem("countInLS"));
   }
-  cats = parseInt(localStorage.getItem("countInLS"));
   catCount.textContent = cats;
   // Seconds Count‹
-  cps = parseInt(localStorage.getItem("countCPS"));
+  if (localStorage.getItem("countCPS")) {
+    cps = parseInt(localStorage.getItem("countCPS"));
+  }
   cpsDisplay.textContent = cps + " Per Second";
   // Treats Count
-  numTreats = parseInt(localStorage.getItem("numTreats"));
+  if (localStorage.getItem("numTreats")) {
+    numTreats = parseInt(localStorage.getItem("numTreats"));
+  }
   document.getElementById("treat-amount").innerHTML = numTreats;
   // Bird Count
-  numBird = parseInt(localStorage.getItem("numBird"));
+  if (localStorage.getItem("numBird")) {
+    numBird = parseInt(localStorage.getItem("numBird"));
+  }
   document.getElementById("bird-amount").innerHTML = numBird;
   // Catnip Count
-  numCatnip = parseInt(localStorage.getItem("numCatnip"));
+  if (localStorage.getItem("numCatnip")) {
+    numCatnip = parseInt(localStorage.getItem("numCatnip"));
+  }
   document.getElementById("catnip-amount").innerHTML = numCatnip;
   // Cat Tree Cost
-  numCatTree = parseInt(localStorage.getItem("numCatTree"));
+  if (localStorage.getItem("numCatTree")) {
+    numCatTree = parseInt(localStorage.getItem("numCatTree"));
+  }
   document.getElementById("cattree-amount").innerHTML = numCatTree;
   // Human Bed
-  numHumanBed = parseInt(localStorage.getItem("numHumanBed"));
+  if (localStorage.getItem("numHumanBed")) {
+    numHumanBed = parseInt(localStorage.getItem("numHumanBed"));
+  }
   document.getElementById("humanbed-amount").innerHTML = numHumanBed;
 }
 
@@ -145,5 +156,4 @@ function clickHumanBed() {
 
 humanBed.addEventListener("click", clickHumanBed);
 
-// getCatCount();
-localStorage.clear();
+getCatCount();
