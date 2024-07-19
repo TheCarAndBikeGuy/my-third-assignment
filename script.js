@@ -29,8 +29,8 @@ let numHumanBed = 0;
 function increaseCats() {
   cats += cps;
   catCount.textContent = cats;
-  // localStorage.setItem("countInLS", cats);
-  // localStorage.setItem("countCPS", cps);
+  localStorage.setItem("countInLS", cats);
+  localStorage.setItem("countCPS", cps);
 }
 
 setInterval(increaseCats, 1000);
@@ -49,7 +49,8 @@ function getCatCount() {
   if (localStorage.getItem("countInLS")) {
     cats = parseInt(localStorage.getItem("countInLS"));
   }
-  catCount.textContent = cats;
+  // catCount.textContent = cats;
+  document.getElementById("cat-count").innerHTML = cats;
   // Seconds Count‹
   if (localStorage.getItem("countCPS")) {
     cps = parseInt(localStorage.getItem("countCPS"));
