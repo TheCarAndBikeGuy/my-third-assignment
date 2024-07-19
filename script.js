@@ -43,27 +43,27 @@ function clickCat() {
 
 catBtn.addEventListener("click", clickCat);
 
-if (cats) {
-  getCatCount = cats;
-}
-
+// Back End
 function getCatCount() {
   // Cats Count
+  if (localStorage.getItem("countInLS")) {
+    cats = parseInt(localStorage.getItem("countInLS"));
+  }
   cats = parseInt(localStorage.getItem("countInLS"));
   catCount.textContent = cats;
   // Seconds Count‹
-  cps =  parseInt(localStorage.getItem("countCPS"));
+  cps = parseInt(localStorage.getItem("countCPS"));
   cpsDisplay.textContent = cps + " Per Second";
   // Treats Count
   numTreats = parseInt(localStorage.getItem("numTreats"));
   document.getElementById("treat-amount").innerHTML = numTreats;
-  // Bird Count 
+  // Bird Count
   numBird = parseInt(localStorage.getItem("numBird"));
   document.getElementById("bird-amount").innerHTML = numBird;
   // Catnip Count
   numCatnip = parseInt(localStorage.getItem("numCatnip"));
   document.getElementById("catnip-amount").innerHTML = numCatnip;
-  // Cat Tree Cost 
+  // Cat Tree Cost
   numCatTree = parseInt(localStorage.getItem("numCatTree"));
   document.getElementById("cattree-amount").innerHTML = numCatTree;
   // Human Bed
@@ -145,4 +145,5 @@ function clickHumanBed() {
 
 humanBed.addEventListener("click", clickHumanBed);
 
-getCatCount();
+// getCatCount();
+localStorage.clear();
