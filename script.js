@@ -15,7 +15,7 @@ let cats = 0;
 let cps = 1;
 
 // STATE (global variables) UPGRADES
-let treatCost = 40;
+let treatCost = 200;
 let birdCost = 1000;
 let catnipCost = 3000;
 let catTreeCost = 10000;
