@@ -56,20 +56,20 @@
 @media (max-width: 621px) {
   .facts {
     position: absolute;
-    top: 20px;
+    top: 565px;
     left: 25px;
   }
   ul {
     position: absolute;
-    top: 65px;
+    top: 600px;
     left: -15px;
-    font-size: 10px;
+    font-size: 15px;
   }
   .table {
     position: absolute;
-    top: 175px;
-    left: 15px;
-    font-size: 10px;
+    top: 600px;
+    right: 15px;
+    font-size: 15px;
   }
 
   button #upgThree {
@@ -81,16 +81,16 @@
 @media (max-width: 594px) {
   .facts {
     position: absolute;
-    top: -10px;
-    left: 15px;
+    top: 560px;
+    left: 25px;
   }
   ul {
     position: absolute;
-    top: 20px;
+    top: 600px;
     left: -10px;
   }
   .table {
-    font-size: 9px;
+    font-size: 15px;
   }
   button #upgOne {
     height: 33px;
