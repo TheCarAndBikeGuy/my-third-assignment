@@ -1,0 +1,7 @@
+@media (min-width: 900px) {
+    .facts {
+        position: absolute;
+        bottom: 50px;
+        left: 100px;
+    }
+}

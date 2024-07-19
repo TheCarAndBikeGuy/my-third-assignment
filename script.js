@@ -3,7 +3,7 @@ const catCount = document.getElementById("cat-count");
 const cpsDisplay = document.getElementById("cps-display");
 const catBtn = document.getElementById("catBtn");
 
-//Upgrades
+// Upgrades
 const cheeseTreat = document.querySelector(".upgradeOne");
 const birdChasing = document.querySelector(".upgradeTwo");
 const catnip = document.querySelector(".upgradeThree");
@@ -14,10 +14,23 @@ const humanBed = document.querySelector(".upgradeFive");
 let cats = 0;
 let cps = 1;
 
+// STATE (global variables) UPGRADES
+let treatCost = 40;
+let birdCost = 1000;
+let catnipCost = 3000;
+let catTreeCost = 10000;
+let humanBedCost = 15000;
+let numTreats = 0;
+let numBird = 0;
+let numCatnip = 0;
+let numCatTree = 0;
+let numHumanBed = 0;
+
 function increaseCats() {
   cats += cps;
   catCount.textContent = cats;
   localStorage.setItem("countInLS", cats);
+  localStorage.setItem("countCPS", cps);
 }
 
 setInterval(increaseCats, 1000);
@@ -31,32 +44,101 @@ function clickCat() {
 catBtn.addEventListener("click", clickCat);
 
 function getCatCount() {
+  // Cats Count
   cats = parseInt(localStorage.getItem("countInLS"));
   catCount.textContent = cats;
+  // Seconds Count
+  cps =  parseInt(localStorage.getItem("countCPS"));
+  cpsDisplay.textContent = cps + " Per Second";
+  // Treats Count
+  numTreats = parseInt(localStorage.getItem("numTreats"));
+  document.getElementById("treat-amount").innerHTML = numTreats;
+  // Bird Count 
+  numBird = parseInt(localStorage.getItem("numBird"));
+  document.getElementById("bird-amount").innerHTML = numBird;
+  // Catnip Count
+  numCatnip = parseInt(localStorage.getItem("numCatnip"));
+  document.getElementById("catnip-amount").innerHTML = numCatnip;
+  // Cat Tree Cost 
+  numCatTree = parseInt(localStorage.getItem("numCatTree"));
+  document.getElementById("cattree-amount").innerHTML = numCatTree;
+  // Human Bed
+  numHumanBed = parseInt(localStorage.getItem("numHumanBed"));
+  document.getElementById("humanbed-amount").innerHTML = numHumanBed;
 }
-
-getCatCount();
 
 // Upgrades
-// function to decrease the total number of clicks by 200 when clicked
-// add 10 seconds onto the per second when treats is clicked 
+// Cat Treat Upgrade
 
 function clickTreat() {
-
+  if (cats >= treatCost) {
+    cats = cats - treatCost;
+    cps = cps + 10;
+    cpsDisplay.innerHTML = cps + " Per Second";
+    numTreats = numTreats + 1;
+  }
+  document.getElementById("treat-amount").innerHTML = numTreats;
+  localStorage.setItem("numTreats", numTreats);
 }
 
-function clickBirdChase() {  
+cheeseTreat.addEventListener("click", clickTreat);
 
+// Bird Chase Upgrade
+function clickBirdChase() {
+  if (cats >= birdCost) {
+    cats = cats - birdCost;
+    cps = cps + 30;
+    cpsDisplay.innerHTML = cps + " Per Second";
+    numBird = numBird + 1;
+  }
+  document.getElementById("bird-amount").innerHTML = numBird;
+  localStorage.setItem("numBird", numBird);
 }
 
-function clickCatnip() {  
+birdChasing.addEventListener("click", clickBirdChase);
 
+// Catnip Upgrade
+function clickCatnip() {
+  if (cats >= catnipCost) {
+    cats = cats - catnipCost;
+    cps = cps + 70;
+    cpsDisplay.innerHTML = cps + " Per Second";
+    numCatnip = numCatnip + 1;
+  }
+  document.getElementById("catnip-amount").innerHTML = numCatnip;
+  localStorage.setItem("numCatnip", numCatnip);
 }
 
-function clickCatTree() {  
+catnip.addEventListener("click", clickCatnip);
 
+// Cat Tree Upgrade
+
+function clickCatTree() {
+  if (cats >= catTreeCost) {
+    cats = cats - catTreeCost;
+    cps = cps + 150;
+    cpsDisplay.innerHTML = cps + " Per Second";
+    numCatTree = numCatTree + 1;
+  }
+  document.getElementById("cattree-amount").innerHTML = numCatTree;
+  localStorage.setItem("numCatTree", numCatTree);
 }
 
-function clickHumanBed() {  
+catTree.addEventListener("click", clickCatTree);
 
+// Human Bed Upgrade
+
+function clickHumanBed() {
+  if (cats >= humanBedCost) {
+    cats = cats - humanBedCost;
+    cps = cps + 250;
+    cpsDisplay.innerHTML = cps + " Per Second";
+    numHumanBed = numHumanBed + 1;
+  }
+  document.getElementById("humanbed-amount").innerHTML = numHumanBed;
+  localStorage.setItem("numHumanBed", numHumanBed);
 }
+
+humanBed.addEventListener("click", clickHumanBed);
+
+getCatCount();

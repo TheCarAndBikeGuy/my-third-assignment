@@ -37,13 +37,17 @@ p {
   margin: 0 auto;
 }
 
+#catBtn:active {
+  transform: rotateY(180deg);
+}
+
 /* Cat Facts */
 
 .facts {
   color: #fff;
   border-radius: 10px;
   position: absolute;
-  top: 10px;
+  bottom: 200px;
   left: 30px;
   text-decoration: underline;
 }
@@ -52,17 +56,16 @@ ul {
   color: #fff;
   border-radius: 10px;
   position: absolute;
-  top: 45px;
+  bottom: 45px;
   left: 5px;
 }
 
 /* Table */
 .table {
   position: absolute;
-  top: 20px;
+  bottom: 75px;
   right: 40px;
 }
-
 
 table,
 th,
@@ -72,12 +75,13 @@ td {
   color: #fff;
 }
 
+/* All of the Upgrades */
 
 .all {
- display: flex;
- flex-direction: row;
- justify-content: center;
- gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Upgrade One */
@@ -87,8 +91,8 @@ td {
 }
 
 .upgradeOne:hover {
-    background-color: #FFD6BA;
-    transition: 0.5s;
+  background-color: #ffd6ba;
+  transition: 0.5s;
 }
 
 button #upgOne {
@@ -103,8 +107,8 @@ button #upgOne {
 }
 
 .upgradeTwo:hover {
-    background-color: #FFD6BA;
-    transition: 0.5s;
+  background-color: #ffd6ba;
+  transition: 0.5s;
 }
 
 button #upgTwo {
@@ -119,8 +123,8 @@ button #upgTwo {
 }
 
 .upgradeThree:hover {
-    background-color: #FFD6BA;
-    transition: 0.5s;
+  background-color: #ffd6ba;
+  transition: 0.5s;
 }
 
 button #upgThree {
@@ -135,8 +139,8 @@ button #upgThree {
 }
 
 .upgradeFour:hover {
-    background-color: #FFD6BA;
-    transition: 0.5s;
+  background-color: #ffd6ba;
+  transition: 0.5s;
 }
 
 button #upgFour {
@@ -151,8 +155,8 @@ button #upgFour {
 }
 
 .upgradeFive:hover {
-    background-color: #FFD6BA;
-    transition: 0.5s;
+  background-color: #ffd6ba;
+  transition: 0.5s;
 }
 
 button #upgFive {
