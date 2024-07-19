@@ -49,13 +49,12 @@ function getCatCount() {
   if (localStorage.getItem("countInLS")) {
     cats = parseInt(localStorage.getItem("countInLS"));
   }
-  document.getElementById("cat-count").innerHTML = cats;
+  catCount.textContent = cats;
   // Seconds Count‹
   if (localStorage.getItem("countCPS")) {
     cps = parseInt(localStorage.getItem("countCPS"));
   }
   cpsDisplay.textContent = cps + " Per Second";
-  document.getElementById("cps-display").innerHTML = cps;
   // Treats Count
   if (localStorage.getItem("numTreats")) {
     numTreats = parseInt(localStorage.getItem("numTreats"));
