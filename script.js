@@ -45,13 +45,13 @@ catBtn.addEventListener("click", clickCat);
 
 function getCatCount() {
   // Cats Count
+  let countInLS = 0;
   cats = parseInt(localStorage.getItem("countInLS"));
   catCount.textContent = cats;
   // Seconds Count‹
   cps =  parseInt(localStorage.getItem("countCPS"));
   cpsDisplay.textContent = cps + " Per Second";
   // Treats Count
-  numTreats = 0; 
   numTreats = parseInt(localStorage.getItem("numTreats"));
   document.getElementById("treat-amount").innerHTML = numTreats;
   // Bird Count 
