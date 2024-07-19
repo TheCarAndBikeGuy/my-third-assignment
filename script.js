@@ -29,8 +29,8 @@ let numHumanBed = 0;
 function increaseCats() {
   cats += cps;
   catCount.textContent = cats;
-  localStorage.setItem("countInLS", cats);
-  localStorage.setItem("countCPS", cps);
+  // localStorage.setItem("countInLS", cats);
+  // localStorage.setItem("countCPS", cps);
 }
 
 setInterval(increaseCats, 1000);
